@@ -1,0 +1,28 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  margin: 0 0 40px;
+}
+.tweet {
+  margin: 5px;
+  padding: 10px;
+  border-style: double;
+}
+.user {
+  text-align: left;       
+}
+.message {
+  text-align: center;       
+}
+.timeago {
+  text-align: right;       
+}
+
+#post-tweet-comment {
+  width: -webkit-fill-available;
+  height: 35px;
+}

@@ -1,27 +1,40 @@
 <!DOCTYPE html> 
 <html>
   <head>
+    <title>Twittler Test Page</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="jquery.timeago.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   </head>
-  <body>
-    <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+  <body class="container">
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+    <div class="header">
+      <h1>Twittler <small>codestates pre25 </small> </h1>
+      <button id="refresh-tweet" class="btn btn-primary btn-block">Refresh</button>
+    </div>
 
-      });
+    <div class="input-group">
+      <input type="text" id="post-tweet-comment" placeholder="Write your comments">
+      <span class="input-group-btn">
+        <button id="submit-tweet" class="btn btn-default" type="button"> Post </button>
+      </span>
+    </div>
+    
+    <div class="jumbotron">
+      <div id="tweets" class="post">
+      </div>
+    </div>
 
-    </script>
-  </body>
+    <div class="footer">
+      made by J.
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+</body>
 </html>
